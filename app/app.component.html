@@ -1,0 +1,21 @@
+<!--The header for the application-->
+<h1>Full Calendar - Scheduler Demo</h1>
+
+<!--<input type="text" pInputText/>
+
+<button pButton type="button" icon="fa-check" label="Click"></button>
+<p-schedule [events]="events"></p-schedule>-->
+
+
+    <ds-scheduler 
+        editable="false"  
+        defaultView="timelineDay" 
+        [events]="events" 
+        [resources]="resources"
+        [defaultDate]="defaultDate"        
+        slotLabelFormat="HH:mm"          
+        resourceAreaWidth="120" 
+        resourceLabelText="&nbsp;" 
+        titleFormat="YYYY-MM-DD dddd" 
+        nowIndicator="true"       
+    ></ds-scheduler>   

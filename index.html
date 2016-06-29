@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular 2 - Full Calendar - Scheduler - Demo</title>
+    <!--<base href="/">-->        
+    <!-- Ugly solution but resolves the problem when deploying to a sub folder -->
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">        
+    <!-- build:css assets/bundle.css -->  
+    <link href='node_modules/fullcalendar/dist/fullcalendar.min.css' rel='stylesheet' />
+    <link href='node_modules/fullcalendar-scheduler/dist/scheduler.min.css' rel='stylesheet' />
+<!-- CSS for PrimeUI -->
+    <link rel="stylesheet" type="text/css" href="node_modules/primeui/themes/bootstrap/theme.css" />    
+    <!--<link rel="stylesheet" type="text/css" href="node_modules/primeui/primeui-ng-all.min.css" />            -->
+    <!-- app:css -->    
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <ds-app>
+      <i class="center-fix main-spinner fa fa-spin fa-spinner"></i>
+    </ds-app>
+    <!-- build:js assets/jquerybootstrap.js -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!-- endbuild -->    
+    <!-- build:js assets/es6-shim.js -->
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js assets/zonereflectsystem.js -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <!-- endbuild -->    
+    <!-- build:js assets/primengmomentfullcalendar.js --> 
+    <script src="node_modules/moment/moment.js"></script>       
+    <script src='node_modules/fullcalendar/dist/fullcalendar.js'></script>
+    <script src='node_modules/fullcalendar-scheduler/dist/scheduler.js'></script>            
+    <!-- endbuild -->
+    <!-- build:remove -->
+    <script src="systemjs.conf.js"></script>
+    <!-- endbuild -->
+    <script>
+      System.import('app/main.js')
+        .catch(function(err) { console.error(err); });
+    </script>
+  </body>
+</html>
